@@ -5,26 +5,36 @@ const generate=document.querySelector("#generate")
 
 
 let game=()=>{
+    container.innerHTML='';
     const number=document.querySelector("#input");
+
     let size=number.value;
-    console.log(size)
-    for(let i=0;i<size;i++){
-        const row=document.createElement("div");
-        row.style.display="flex";
-        row.style.height="100%";
-        
-        for(let j=0;j<size;j++){
-            const squares=document.createElement("div");
-            squares.style.backgroundColor="blue";
-            squares.style.color="white";
-            squares.setAttribute("class","square")
+    if(size>100){
+        alert("Your number is too high!")
+        return
+    }else{
+        console.log(size)
+        for(let i=0;i<size;i++){
+            const row=document.createElement("div");
+            row.style.display="flex";
+            row.style.height="100%";
             
-            squares.style.flex="1";
-            
-            row.appendChild(squares);
+            for(let j=0;j<size;j++){
+                const squares=document.createElement("div");
+                squares.style.backgroundColor="white";
+                squares.style.color="white";
+                squares.setAttribute("class","square")
+                squares.style.flex="1";
+                squares.addEventListener("mouseover",()=>{
+                    squares.style.backgroundColor="black";
+                    console.log("boja")
+                });
+                row.appendChild(squares);
+            }
+            container.appendChild(row);
         }
-        container.appendChild(row);
     }
+    
 }
 generate.addEventListener("click",game);
 

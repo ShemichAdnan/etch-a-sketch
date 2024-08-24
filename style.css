@@ -15,7 +15,9 @@ body{
     font-size: 15px;
 }
 #container{
-    background-color: red;
+    background-color: rgb(227, 227, 227);
+    border: 2px solid gray;
+    border-radius: 2px;
     width: 640px;
     height: 640px;
     display: flex;
