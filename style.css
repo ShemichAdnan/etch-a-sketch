@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#input{
+    margin-bottom: 50px;
+    width: 40px;
+    height: 20px;
+    font-size: 15px;
+}
+#container{
+    background-color: red;
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1; 
+}
+button{
+    width: 80px;
+    height: 26px;
+    font-size: 15px;
+}
